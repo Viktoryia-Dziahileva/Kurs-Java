@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class XX {
+
+    public static void main(String args[]) {
+        Scanner in=new Scanner(System.in);
+        System.out.print("Podaj illość produktów  ");
+        int a=Integer.valueOf(in.nextLine());
+        int i=1;
+
+        while ( i <= a) {
+            System.out.print("Jaki produkt?");
+            String nazwa =in.nextLine();
+            System.out.println("Dodałem do koszyka " + nazwa+ " to nasz "+ i +" produkt! ");
+            i++;
+        }
+
+    }
+}
