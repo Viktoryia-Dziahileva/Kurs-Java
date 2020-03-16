@@ -12,3 +12,17 @@ do {
         System.out.println("Zakończenie programy");
 }
         }
+// a teraz z while
+import java.util.Scanner;
+public class XX {
+    public static void main(String args[]) {
+        Scanner in=new Scanner(System.in);
+        String znak ;
+        System.out.print("Podaj znak: ");
+        
+         while (!"koniec".equals(znak=in.nextLine())) {
+            System.out.println("Podany znak:" + znak);
+        }
+       
+    }
+}
