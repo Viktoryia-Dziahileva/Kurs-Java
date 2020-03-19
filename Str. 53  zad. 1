@@ -1,0 +1,41 @@
+import java.util.Arrays;
+import java.util.Scanner;
+public class Tablice {
+    public static void main(String args[]) {
+
+        int[] arr = {2, 56, 6,4,61,7, 11, 38};
+        double min = arr[0];
+        double max = arr[0];
+        double sum=0;
+        double mediana=0;
+        double srodek=0;
+
+        for (int i = 0; i < arr.length; i++) {
+            if (min > arr[i])
+                min = arr[i];
+        }
+        for (int i = 0; i < arr.length; i++) {
+            if (max < arr[i])
+                max = arr[i];
+        }
+        for (int i = 0; i < arr.length; i++) {
+            sum=sum+arr[i];
+        }
+        double sumSred=sum/arr.length;
+
+        Arrays.sort(arr);
+        if (arr.length%2==0){
+            srodek=arr[arr.length/2]+arr[(arr.length/2)-1];
+            mediana=srodek/2;
+        }
+        else {
+            mediana=arr[arr.length/2];
+        }
+        System.out.println("min = " + min);
+        System.out.println("max = " + max);
+        System.out.println("sum = " + sum);
+        System.out.printf("%s+%.2f\n", "sumSred = " , sumSred);
+        System.out.println("sort = " + Arrays.toString(arr));
+        System.out.println("mediana = " + mediana);
+    }
+}
