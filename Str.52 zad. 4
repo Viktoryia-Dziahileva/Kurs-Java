@@ -1,0 +1,26 @@
+import java.util.Scanner;
+public class Tablice {
+
+    public static void main(String args[]) {
+        Scanner in = new Scanner(System.in);
+        String[] tab = new String[3];
+        for (int a = 0; a < tab.length; a++) {
+            System.out.print("Podaj imie ");
+            tab[a] = in.nextLine();
+            if (tab[a].length()<5) {
+                // System.out.println(tab[a]);
+                tab[a]=tab[a];
+            }
+            else
+                tab[a]=null;
+        }
+        for (String x : tab) {
+            if (x!=null) {
+                System.out.print(x + ", ");
+            }
+            else {
+                System.out.print("");
+            }
+        }
+    }
+}
